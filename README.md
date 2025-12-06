@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Codeify Logo]<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/65d7a9c3-646a-44ec-933b-23dfe4c1c865" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/65d7a9c3-646a-44ec-933b-23dfe4c1c865" />
 
 
 **A modern, AI-powered code review tool that provides expert-level feedback on your code**
