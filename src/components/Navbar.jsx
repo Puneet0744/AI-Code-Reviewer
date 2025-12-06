@@ -1,21 +1,26 @@
 import React from 'react'
-import { BrainCircuit, Sun } from 'lucide-react';
+import { BrainCircuit, Sparkles } from 'lucide-react';
 
-// This function returns a Navbar component
 const Navbar = () => {
-  // Return a JSX element
   return (
-    <>
-      <div className="nav flex items-center justify-between h-[90px] bg-zinc-900" style={{padding:"0px 150px"}}>
-        <div className="logo flex items-center gap-[10px]">
-          <BrainCircuit size={30} color='#9333ea'/>
-          <span className="text-2xl font-bold text-white ml-2">Codeify</span>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-brand">
+          <div className="brand-icon-wrapper">
+            <BrainCircuit size={28} className="brand-icon" />
+            <Sparkles size={16} className="brand-sparkle" />
+          </div>
+          <span className="brand-text">Codeify</span>
+          <span className="brand-badge">AI</span>
         </div>
-        <div className="icons flex items-center gap-[20px]">
-          <i className='cursor-pointer transition-all hover:text-[#9333ea]'><Sun/></i>
+        <div className="navbar-actions">
+          <div className="status-indicator">
+            <div className="status-dot"></div>
+            <span className="status-text">Ready</span>
+          </div>
         </div>
       </div>
-    </>
+    </nav>
   )
 }
 

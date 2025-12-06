@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Skeleton Key Body -->
+  <path d="M20 20C20 16.6863 22.6863 14 26 14C29.3137 14 32 16.6863 32 20V28C32 30.2091 33.7909 32 36 32H40C42.2091 32 44 33.7909 44 36V40C44 42.2091 45.7909 44 48 44H52C54.2091 44 56 45.7909 56 48C56 50.2091 54.2091 52 52 52H48C45.7909 52 44 50.2091 44 48V44H40C37.7909 44 36 42.2091 36 40V36C36 33.7909 34.2091 32 32 32V20C32 14.4772 27.5228 10 22 10C16.4772 10 12 14.4772 12 20V24H20V20Z" 
+        fill="url(#purpleGradient)" 
+        filter="url(#glow)" 
+        stroke="url(#purpleGradient)" 
+        stroke-width="1.5"/>
+  
+  <!-- Key Hole -->
+  <circle cx="22" cy="20" r="3" fill="none" stroke="url(#purpleGradient)" stroke-width="1.5"/>
+  <path d="M22 20L22 16" stroke="url(#purpleGradient)" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Sparkle/Star Icon (top-right) -->
+  <g transform="translate(42, 8)">
+    <path d="M8 0L9.763 5.236L15 7L9.763 8.764L8 14L6.237 8.764L1 7L6.237 5.236L8 0Z" 
+          fill="url(#purpleGradient)" 
+          filter="url(#glow)"/>
+    <circle cx="8" cy="7" r="1.5" fill="#fff" opacity="0.8"/>
+  </g>
+</svg>
