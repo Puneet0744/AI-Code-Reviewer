@@ -108,11 +108,18 @@ const App = () => {
 
   const [code, setCode] = useState("");
 
-  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+  // Initialize AI only if API key is available
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState("");
 
   async function reviewCode() {
+    if (!ai) {
+      setResponse(`## ⚠️ Configuration Error\n\nPlease set your \`VITE_GEMINI_API_KEY\` environment variable in Vercel.\n\n1. Go to your Vercel project settings\n2. Navigate to Environment Variables\n3. Add \`VITE_GEMINI_API_KEY\` with your Gemini API key\n4. Redeploy your application`);
+      return;
+    }
+
     setResponse("")
     setLoading(true);
     try {
@@ -136,7 +143,7 @@ Code: ${code}
       });
       setResponse(response.text)
     } catch (error) {
-      setResponse(`## Error\n\nAn error occurred while reviewing your code: ${error.message}\n\nPlease try again.`)
+      setResponse(`## Error\n\nAn error occurred while reviewing your code: ${error.message}\n\nPlease check your API key and try again.`)
     } finally {
       setLoading(false);
     }
